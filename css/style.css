@@ -1,0 +1,722 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+/*全共通CSS*/
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'しっぽり明朝', serif;
+    color: #ecf6f8;
+    /*文字の行間*/
+    line-height: 1.7;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/main.jpg);
+    min-width: 1024px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+
+    /*width: 100%;*/
+    /*中央寄せ*/
+    margin: 0 auto;
+    /*背景画像に黒色カバー*/
+    /*background-color: rgba(24, 23, 30, 0.75);*/
+}
+
+/*ヘッダー*/
+header {
+    height: 160px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-right {
+    float: right;
+    padding-right: 10%;
+}
+
+/*ナビゲーションメニュー*/
+.nav {
+    display: flex;
+    padding-top: 72px;
+    font-size: 18px;
+    list-style: none;
+    font-weight: bold;
+}
+
+.underline {
+    color: #ecf6f8;
+    display: block;
+    position: relative;
+    /*ホバー変化の秒数指定*/
+    transition: all 0.5s;
+    /*親メニュー同士の間隔*/
+    margin-left: 36px;
+    /*ホバー範囲の拡大*/
+    height: 40px;
+}
+
+.underline:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background: #9b9696;
+    transform: scale(0, 1);
+    transition: 0.4s;
+}
+
+.underline:hover:before {
+    transform: scale(1);
+}
+
+.underline:hover {
+    color: #9b9696;
+}
+
+/*フッター*/
+footer {
+    width: 100%;
+    z-index: 998;
+    /*装飾のためのCSS*/
+    padding: 20px 0;
+    color: #ecf6f8;
+    text-align: center;
+    background: rgba(94, 92, 92, 0.5);
+    height: 80px;
+    padding-bottom: 0%;
+}
+
+/*========= ページトップのためのCSS ===============*/
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(150px);
+    z-index: 999;
+}
+
+/*　上に上がる動き　*/
+#page-top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(150px);
+    }
+}
+
+/*画像の切り替えと動き*/
+#page-top a {
+    /*aタグの形状*/
+    display: block;
+    width: 100px;
+    height: 100px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.6rem;
+    /*背景画像の指定*/
+    background: url(../images/pagetop1.png) no-repeat center;
+    background-size: contain;
+}
+
+#page-top.floatAnime a {
+    width: 100px;
+    height: 130px;
+    /*背景画像の指定*/
+    background: url(../images/pagetop2.png) no-repeat center;
+    background-size: contain;
+    /*アニメーションの指定*/
+    animation: floatAnime 2s linear infinite;
+    opacity: 0;
+}
+
+@keyframes floatAnime {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateX(-6px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(6px);
+        opacity: 1;
+    }
+}
+
+/*Page Topと書かれたテキストの位置*/
+#page-top span {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    color: #ecf6f8;
+}
+
+/*-----index-----*/
+.top-wrapper {
+    padding-top: 160px;
+    text-align: center;
+    background-size: cover;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.contents-wrapper {
+    height: 400px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    width: 15%;
+    /* 箱の大きさ調整 */
+    text-align: center;
+    margin: 0 30px;
+    transition-duration: 0.5s;
+    z-index: 998;
+}
+
+.item img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    transition-duration: 0.5s;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+
+}
+
+.scrolldown2 {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    left: 50%;
+    z-index: 999;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span {
+    /*描画位置*/
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    /*テキストの形状*/
+    color: #ecf6f8;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    /*縦書き設定*/
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    /*丸の形状*/
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ecf6f8;
+    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+    animation:
+        circlemove 1.6s ease-in-out infinite,
+        cirlemovehide 1.6s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+    0% {
+        bottom: 45px;
+    }
+
+    100% {
+        bottom: -5px;
+    }
+}
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 線の描写 */
+.scrolldown2:after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*線の形状*/
+    width: 2px;
+    height: 50px;
+    background: #ecf6f8;
+}
+
+/*-----know-----*/
+.know-wrapper,
+.index-wrapper {
+    background-color: rgba(96, 96, 104, 0.2);
+}
+
+.know-wrapper {
+    text-align: center;
+    background-size: cover;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.index,
+.indexx {
+    text-align: center;
+}
+
+.index li {
+    list-style: none;
+}
+
+.index a {
+    color: #ecf6f8;
+    font-size: 20px;
+}
+
+.index a:hover {
+    text-decoration: underline;
+}
+
+.index-left {
+    text-align: left;
+    display: inline-block;
+}
+
+h1 {
+    padding: 1em 0em;
+}
+
+h2 {
+    padding-top: 1em;
+}
+
+.listimg {
+    list-style-image: url(../images/m.png);
+}
+
+/*-----see-----*/
+.see-wrapper {
+    padding-bottom: 50px;
+    text-align: center;
+    background-size: cover;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.area {
+    position: relative;
+    margin: 0 auto 10% auto;
+    padding: 0 30px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.area figure {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 40%;
+    line-height: 0;
+}
+
+.area:nth-child(2n) figure {
+    left: 50%;
+}
+
+.area .box {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    background: #ecf6f8;
+    padding: 30px;
+    background-color: rgb(197, 193, 193, 0.5);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.area:nth-child(2n) .box {
+    left: inherit;
+    right: 30%;
+}
+
+.box h2,
+.box p {
+    color: #ecf6f8;
+}
+
+/*-----listen-----*/
+.listen-wrapper {
+    text-align: center;
+    background-size: cover;
+    font-size: 18px;
+    line-height: 50px;
+    background-color: rgba(96, 96, 104, 0.2);
+    padding-bottom: 1em;
+}
+
+.process-wrapper {
+    background-color: rgba(96, 96, 104, 0.2);
+    text-align: center;
+}
+
+.process-wrapper h1 {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#text-slider1 {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+#text-slider2 {
+    font-size: 16px;
+    line-height: 2.0;
+    padding-bottom: 16px;
+}
+
+table {
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 2.0;
+    padding: 0 10%;
+}
+
+table img {
+    border-radius: 35px;
+}
+
+table td p,
+table td h2 {
+    padding-left: 5%;
+}
+
+#listen h1 {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+}
+
+#listen h1:before,
+#listen h1:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 45px;
+    height: 2px;
+    border-top: thick double #ecf6f8;
+}
+
+#listen h1:before {
+    left: 0;
+}
+
+#listen h1:after {
+    right: 0;
+}
+
+/*wave*/
+#waver p {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.wave {
+    position: relative;
+}
+
+.wave canvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*スライドショー*/
+.slick-arrow {
+    z-index: 2;
+}
+
+.slick-prev {
+    left: -45px !important;
+}
+
+.slick-next {
+    right: -30px !important;
+}
+
+#double-slider {
+    width: 30%;
+    margin: 0 auto;
+}
+
+#main-slider img {
+    border-radius: 35px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #ecf6f8;
+    font-size: 35px;
+}
+
+/*-----q&a-----*/
+.qa-wrapper {
+    padding-bottom: 50px;
+    text-align: center;
+    background-size: cover;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+/*アコーディオン全体*/
+.accordion-area {
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.answer a {
+    text-decoration: underline;
+}
+
+.accordion-area li {
+    margin: 10px 0;
+}
+
+.accordion-area section {
+    border: 1px solid #ecf6f8;
+}
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;
+    /*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: #ecf6f8;
+
+}
+
+.title::before {
+    top: 48%;
+    left: 15px;
+    transform: rotate(0deg);
+
+}
+
+.title::after {
+    top: 48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+
+/*　closeというクラスがついたら形状変化　*/
+
+.title.close::before {
+    transform: rotate(45deg);
+}
+
+.title.close::after {
+    transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.answer {
+    display: none;
+    /*はじめは非表示*/
+    background: rgba(211, 206, 206, 0.5);
+    margin: 0 3% 3% 3%;
+    padding: 3%;
+}
+
+
+/*--レコード種類タブ--*/
+.tab1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.tab1__item {
+    flex: 1;
+    flex-basis: 120px;
+}
+
+.tab1__link {
+    display: block;
+    text-decoration: none;
+    color: #ecf6f8;
+    background-color: #708dab;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.tab1__link.on {
+    background-color: rgba(112, 141, 171, 0.5);
+}
+
+.tab1-body__item {
+    margin: 30px 15px;
+    display: none;
+    text-align: center;
+}
+
+.tab1-body__item.on {
+    display: block;
+}
+
+.tab1__link:before {
+    transition: all 0.4s ease-out;
+}
+
+.tab1__link:after {
+    transition: all 0.4s ease-out;
+}
+
+/*--目次デコレーション--*/
+.heading {
+    position: relative;
+    padding-bottom: 0;
+    border-bottom: 2px solid #708dab;
+    margin-bottom: 20px;
+}
+
+.heading span {
+    position: relative;
+    z-index: 2;
+}
+
+.heading::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(112, 141, 171, 0.5);
+    font-size: 54px;
+    font-weight: 800;
+    z-index: 1;
+}
+
+/*--フェードイン--*/
+.fadein {
+    opacity: 0.1;
+    transform: translate(0, 50px);
+    transition: all 500ms;
+}
+
+.fadein.scrollin {
+    opacity: 1;
+    transform: translate(0, 0);
+}
