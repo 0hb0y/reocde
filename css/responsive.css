@@ -175,7 +175,7 @@
 
     .slick-prev:before,
     .slick-next:before {
-        font-size: 85px;
+        font-size: 130px;
     }
 
     .slick-prev {
@@ -183,7 +183,7 @@
     }
 
     .slick-next {
-        right: -25px !important;
+        right: 30px !important;
     }
 
     table {
