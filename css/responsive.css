@@ -1,0 +1,349 @@
+/*---メディアクエリー---*/
+@media(max-width: 670px) {
+
+    body {
+        margin: 0;
+        font-family: 'しっぽり明朝', serif;
+        color: #ecf6f8;
+        /*文字の行間*/
+        line-height: 1.7;
+        min-height: 100vh;
+        background-attachment: fixed;
+        background-position: center;
+        background-image: url(../images/main.jpg);
+        min-width: 1024px;
+    }
+
+    .scrolldown2 {
+        display: none;
+    }
+
+    .pc_view {
+        display: none;
+    }
+
+    html {
+        letter-spacing: 0.12em;
+    }
+
+    #page-top {
+        right: 20px;
+        bottom: 50px;
+    }
+
+    #page-top a {
+        font-size: 30px;
+        width: 150px;
+        height: 150px;
+    }
+
+    #page-top.floatAnime a {
+        width: 150px;
+        height: 180px;
+    }
+
+    /*home*/
+    .logo {
+        width: 250px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .scrolldown2 {
+        left: 80%;
+    }
+
+    .top-wrapper {
+        font-size: 30px;
+        padding-top: 300px;
+        padding: 300px 50px 0;
+    }
+
+    .item {
+        width: 30%;
+        margin-bottom: 25px;
+
+    }
+
+    .top-wrapper img {
+        padding-bottom: 50px;
+        height: 300px;
+    }
+
+    .contents-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        font-size: 30px;
+        padding: 100px 0 200px;
+    }
+
+    .contents-wrapper h3 {
+        font-size: 30px;
+    }
+
+    /*know*/
+    .know-wrapper img {
+        height: 300px;
+    }
+
+    .know-wrapper {
+        font-size: 30px;
+    }
+
+    .index a {
+        font-size: 30px;
+    }
+
+    .index-left {
+        padding: 0 5rem;
+    }
+
+    .index-left p {
+        font-size: 30px;
+    }
+
+    .accordion-item h2 {
+        font-size: 30px;
+    }
+
+    .tab1 {
+        font-size: 30px;
+        padding: 2rem;
+    }
+
+    .tab1-body {
+        font-size: 28px;
+        margin: 0 2rem;
+    }
+
+    .tab1-body h2 {
+        padding-top: 0;
+    }
+
+    /*see*/
+    .see-wrapper img {
+        height: 300px;
+    }
+
+    .see-wrapper {
+        font-size: 30px;
+    }
+
+    .area {
+        padding: 5rem;
+    }
+
+    .area h2 {
+        font-size: 30px;
+    }
+
+    .area p {
+        font-size: 30px;
+    }
+
+    .area .box {
+        left: 10%;
+        margin-right: 5rem;
+    }
+
+    .area:nth-child(2n) .box {
+        right: 10%;
+        margin-left: 5rem;
+    }
+
+    .luxy-el img {
+        padding-top: 50px;
+        width: 500px;
+    }
+
+    /*listen*/
+    .listen-wrapper img {
+        height: 300px;
+    }
+
+    .listen-wrapper {
+        font-size: 35px;
+    }
+
+    #listen h1 {
+        font-size: 50px;
+    }
+
+    #double-slider {
+        width: 80%;
+    }
+
+    .process-wrapper h1,
+    #text-slider1 p,
+    .process-wrapper {
+        font-size: 30px;
+    }
+
+    #text-slider2 p {
+        font-size: 30px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 85px;
+    }
+
+    .slick-prev {
+        left: -85px !important;
+    }
+
+    .slick-next {
+        right: -25px !important;
+    }
+
+    table {
+        padding: 0 5rem;
+        text-align: center;
+    }
+
+    table img {
+        width: 500px;
+        height: 500px;
+    }
+
+    table h2 {
+        font-size: 45px;
+    }
+
+    table p {
+        font-size: 30px;
+    }
+
+    table td,
+    table th {
+        display: block;
+        width: 100%;
+    }
+
+    table td {
+        padding-bottom: 100px;
+    }
+
+    /*q&a*/
+    .qa-wrapper img {
+        height: 300px;
+    }
+
+    .qa-wrapper {
+        font-size: 30px;
+    }
+
+    .accordion-area h3,
+    .accordion-area p {
+        font-size: 30px;
+    }
+
+}
+
+/*--humburgermenu--*/
+
+.hamburger {
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    z-index: 100;
+}
+
+.hamburger_bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: #ecf6f8;
+    transition: top 0.24s, transform 0.24s, opacity 0.24s;
+}
+
+.hamburger_bar:nth-child(1) {
+    top: 0;
+}
+
+.hamburger_bar:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger_bar:nth-child(3) {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.hamburger_bar.is_active:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.hamburger_bar.is_active:nth-child(2) {
+    transform: translate(50%, -50%);
+    opacity: 0;
+}
+
+.hamburger_bar.is_active:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+.hum {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*bottom: 0;*/
+    right: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.24s;
+    pointer-events: none;
+}
+
+.hum.is_active {
+    opacity: 1;
+    pointer-events: auto;
+    padding-bottom: 150px;
+}
+
+.hum-list {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 40px;
+}
+
+/* リセットCSS */
+button {
+    border-color: transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media(min-width:671px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
