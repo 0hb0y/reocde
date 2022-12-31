@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=670">
+    <title>RE:CODE</title>
+    <link rel="icon" href="images/favicon.ico">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https: //fonts.googleapis.com/css2? family=七宝+明朝& display=swap" rel="stylesheet" />
+    <!--CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+    <!--スライダー-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!--スライダー動かすやつ-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="hamburger-menu">
+            <button class="hamburger">
+                <span class="hamburger_bar"></span>
+                <span class="hamburger_bar"></span>
+                <span class="hamburger_bar"></span>
+            </button>
+
+            <nav class="hum">
+                <ul class="hum-list">
+                    <li class="hum-item"><a href="#home">ホーム</a></li>
+                    <li class="hum-item"><a href="#know">知る！</a></li>
+                    <li class="hum-item"><a href="#see">見る！</a></li>
+                    <li class="hum-item"><a href="#listen">聴く！</a></li>
+                    <li class="hum-item"><a href="#q&a">Q&A</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="container">
+            <div class="header-left">
+                <a href="#home"><img class="logo" src="images/logo.gif" alt="サイトロゴ"></a>
+            </div>
+            <!--header-left-->
+            <div class="header-right">
+                <ul class="nav">
+                    <li class="nav-li"><a class="underline" href="#home">　ホーム　</a></li>
+                    <li class="nav-li"><a class="underline" href="#know">　知る!　</a></li>
+                    <li class="nav-li"><a class="underline" href="#see">　見る!　</a></li>
+                    <li class="nav-li"><a class="underline" href="#listen">　聴く!　</a></li>
+                    <li class="nav-li"><a class="underline" href="#q&a">　Q&A　</a></li>
+                </ul>
+                <!--nav-->
+            </div>
+            <!--header-right-->
+        </div>
+        <!--container-->
+    </header>
+
+    <div id="home">
+        <div class="container">
+            <div class="top-wrapper">
+                <img src="images/mainlogo.png" alt="RE:CODEロゴ">
+                <p>RE:CORD(リコード)は現代版レコード情報サイトです。</p>
+                <p>レコードブームの再来よりリコードと名付けました。</p>
+                <p>現代ならではのレコードの楽しみ方をご紹介。</p>
+                <p>今まで知らなかったレコードの魅力に気付けるかも。</p>
+            </div>
+            <!--top-wrapper-->
+        </div>
+        <!--container-->
+
+        <div class="container">
+            <div class="contents-wrapper">
+                <div class="item">
+                    <a href="#know"><img src="images/content1.png" alt="知る！"></a>
+                    <h3>知って楽しむ。</h3>
+                    <p>レコードの仕組みと種類について説明しています。</p>
+                </div>
+                <div class="item">
+                    <a href="#see"><img src="images/content2.png" alt="見る！"></a>
+                    <h3>目で見て楽しむ。</h3>
+                    <p>レコード盤のデザインについて、音以外での魅力に迫ります。</p>
+                </div>
+                <div class="item">
+                    <a href="#listen"><img src="images/content3.png" alt="聴く！"></a>
+                    <h3>耳で聴いて楽しむ。</h3>
+                    <p>レコードプレーヤーで実際に聴いてみましょう。</p>
+                </div>
+                <div class="item">
+                    <a href="#q&a"><img src="images/content4.png" alt="Q&A"></a>
+                    <h3>疑問を楽しむ。</h3>
+                    <p>みなさんからのよくあるご質問をまとめています。</p>
+                </div>
+            </div>
+            <!--contents-wrapper-->
+            <div class="scrolldown2"><span>Scroll</span></div>
+        </div>
+        <!--continer-->
+    </div>
+    <!--home=id-->
+
+    <div id="know">
+        <div id="waver">
+            <div class="wave">
+                <p></p>
+                <canvas id="waveCanvas-know"></canvas>
+            </div>
+            <!--/wave-->
+            <div class="container">
+                <div class="know-wrapper">
+                    <img src="images/knowlogo.png" alt="知る！ロゴ" class="fadein">
+                    <h4 class="fadein">レコードを知って楽しみましょう。</h4>
+                    <h4 class="fadein">仕組みや種類を知ると更に愛着が湧きますね。</h4>
+                </div>
+            </div>
+            <!--container-->
+        </div>
+        <!--/waver-->
+
+        <div class="index-wrapper">
+            <div class="container">
+                <div class="index">
+                    <h1>目次</h1>
+                    <div class="index-left">
+                        <ul>
+                            <li><a href="#index1">1.レコードの仕組み</a></li>
+                            <li><a href="#index2">2.レコードの種類</a></li>
+                            <li><a href="#index3">3.レコードプレーヤーの選び方</a></li>
+                            <li><a href="#index4">4.レコード人気再熱のわけ</a></li>
+                        </ul>
+                    </div>
+                    <!--index-left-->
+                </div>
+                <!--index-->
+
+                <div class="indexx">
+                    <div class="index-left">
+                        <div id="index1">
+                            <h1 class="fadein heading" data-number="01">レコードの仕組み</h1>
+                            <p>音は空気が振動して波となって耳に伝わります。<br class="pc_view">
+                                レコード盤にはその振動を記録した、「音溝」と呼ばれる溝が掘られています。<br class="pc_view">
+                                この溝にレコード針が触れると溝の形状に合わせてレコード針が振動します。<br class="pc_view">
+                                この小さな振動をアンプやBluetoothで出力し聴くのがレコードです。</p>
+                            <p>(参考文献：<cite><a
+                                        href="https://www.audio-technica.co.jp/cartridge/navi/whatis/">Audio-Technica「Listening
+                                        Record Navi」レコードのしくみ 2022年12月22日)</a></cite></p>
+                        </div>
+                        <!--index1=id-->
+
+
+                        <div id="index2">
+                            <h1 class="fadein heading" data-number="02">レコードの種類</h1>
+                            <p>レコードは時代とともに様々な種類が生まれました。<br class="pc_view">
+                                大きさによって収録できる時間(曲数)が異なるからです。<br class="pc_view">
+                                種類を知っておくことは聴く場面で役立つので目を通しておいて損はないです。</p>
+                        </div>
+                        <!--index2=id-->
+                    </div>
+
+                    <ul class="tab1">
+                        <li class="tab1__item on"><span class="tab1__link" data-tab-body="1">SP</span></li>
+                        <li class="tab1__item"><span class="tab1__link" data-tab-body="2">LP</span></li>
+                        <li class="tab1__item"><span class="tab1__link" data-tab-body="3">EP</span></li>
+                        <li class="tab1__item"><span class="tab1__link" data-tab-body="4">シングル</span></li>
+                        <li class="tab1__item"><span class="tab1__link" data-tab-body="5">コンパクト</span></li>
+                    </ul>
+
+
+                    <div class="tab1-body">
+                        <div class="tab1-body__item tab1-body__item--1 on">
+                            <h2>SP(Standard Play)</h2>
+                            <p>大きさ：10または12インチ</p>
+                            <p>回転数：78回転</p>
+                            <p>収録時間：片面３分～５分</p>
+                            <p>レコードが誕生した頃の蓄音機で聴くタイプのレコード。<br class="pc_view">
+                                LPなどが普及しすぐに衰退したため、あまり出回っていない。<br class="pc_view">
+                                他とは違う素材でできており、重量もある。<br class="pc_view">
+                                落としたら割れてしまうほどデリケートなので取り扱いには注意。</p>
+                        </div>
+                        <div class="tab1-body__item tab1-body__item--2">
+                            <h2>LP(Long Play)</h2>
+                            <p>大きさ：12インチ</p>
+                            <p>回転数：33回転</p>
+                            <p>収録時間：片面25分</p>
+                            <p>EPに比べると音質は劣るが、名前の通り長時間の収録が可能。<br class="pc_view">
+                                例えると片面6曲で計12曲を1つの盤で楽しむことができる。<br class="pc_view">
+                                アルバムやクラッシック音楽を収録する際に使用されることが多い。</p>
+                        </div>
+                        <div class="tab1-body__item tab1-body__item--3">
+                            <h2>EP(Extended Play)</h2>
+                            <p>大きさ：7インチ</p>
+                            <p>回転数：45回転</p>
+                            <p>収録時間：7～8分</p>
+                            <p>「延ばす」という意味で、シングル・レコードよりも収録時間が延ばされ3～5曲収録することができる。</p>
+                        </div>
+                        <div class="tab1-body__item tab1-body__item--4">
+                            <h2>シングル・レコード</h2>
+                            <p>大きさ：7インチ</p>
+                            <p>回転数：45回転</p>
+                            <p>収録時間：5～8分</p>
+                            <p>ジュークボックスで自動再生するために開発された。<br class="pc_view">
+                                他のレコードと比べて大きく穴が開いているのでドーナツ盤と呼ばれることもある。<br class="pc_view">
+                                片面に1曲ずつ収録することができる。</p>
+                        </div>
+                        <div class="tab1-body__item tab1-body__item--5">
+                            <h2>12インチシングルレコード</h2>
+                            <p>大きさ：12インチ</p>
+                            <p>回転数：33回転と45回転の2種類</p>
+                            <p>シングル盤と同じで片面に1曲を収録しており、LPや7インチシングル盤より音質が良い。<br class="pc_view">
+                                盤面が大きいので7インチシングル盤に収まらない曲を収録する用途にも使われた。<br class="pc_view">
+                                ジャンボシングルと呼ばれていたこともある。</p>
+                        </div>
+                    </div>
+
+                    <div class="index-left">
+                        <div id="index3">
+                            <h1 class="fadein heading" data-number="03">レコードプレーヤーの選び方</h1>
+                            <p>現代ではレコードプレーヤーも進化しています。</p>
+                            <p>最近はBluetooth搭載のものが登場したのでプレーヤーとレコードを繋げるアンプも必要ありません。<br class="pc_view">
+                                スマホと連携させることも可能です。<br class="pc_view">
+                                USBに対応したモデルであれば、レコードの音質を持ち運ぶこともできます。<br class="pc_view">
+                                また、レコードプレーヤーはインテリアにも人気で非常にデザイン性のあるお洒落なモデルも増えています。</p>
+                        </div>
+                        <!--index3=id-->
+                        <div id="index4">
+                            <h1 class="fadein heading" data-number="04">レコード人気再熱のわけ</h1>
+                            <p>インターネットの普及もあり、YouTubeを代表とした動画配信サービスでシティポップという音楽ジャンルが再注目されました。<br class="pc_view">
+                                日本に限らず、今や海外でも人気を博しています。<br class="pc_view">
+                                特にブームの引き金となったのは、竹内まりやの「プラスティック・ラヴ」や松原みきの「真夜中のドア～Stay with me」があります。</p>
+                        </div>
+                        <!--index4=id-->
+                    </div>
+                    <!--index-left-->
+                </div>
+                <!--indexx-->
+            </div>
+            <!--container-->
+        </div>
+        <!--index-wrapper-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="rgba(96, 96, 104, 0.2)" fill-opacity="1"
+                d="M0,128L40,133.3C80,139,160,149,240,133.3C320,117,400,75,480,85.3C560,96,640,160,720,165.3C800,171,880,117,960,85.3C1040,53,1120,43,1200,58.7C1280,75,1360,117,1400,138.7L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+    <!--know=id-->
+
+    <div id="see">
+
+        <div class="container">
+            <div class="see-wrapper">
+                <img src="images/seelogo.png" alt="見る！ページロゴ" class="fadein">
+                <h4 class="fadein">レコードの魅力は音だけではありません。</h4>
+                <h4 class="fadein">レコード盤のデザインは非常に多種多様。</h4>
+                <h4 class="fadein">今回は主なデザインのレコードをピックアップしてご紹介します。</h4>
+            </div>
+        </div>
+        <!--container-->
+
+        <div class="container">
+            <section class="area">
+                <figure class="luxy-el"><img src="images/scroll1.png" alt="スタンダードレコード" class="fadein"></figure>
+                <div class="box luxy-el">
+                    <h2>スタンダードレコード</h2>
+                    <p>最もスタンダードな黒のレコード盤。あえて「黒」にした理由はレコード表面に付着するゴミやホコリを見つけやすいからだそうです。
+                    </p>
+                    <p><small>写真のレコードは岡田有希子の「Mariya's song book」より</small></p>
+                </div>
+            </section>
+
+            <section class="area">
+                <figure class="luxy-el"><img src="images/scroll2.png" alt="カラーレコード" class="fadein"></figure>
+                <div class="box luxy-el">
+                    <h2>カラーMIXレコード</h2>
+                    <p>カラー盤面に追加カラーを重ねたレコード盤。より個性的なデザインになっています。
+                    </p>
+                    <p><small>写真のレコードはNight tempoの「ファンク・トゥ・ザ・フューチャー」 より</small></p>
+                </div>
+            </section>
+
+            <section class="area">
+                <figure class="luxy-el"><img src="images/scroll3.png" alt="カラーMIXレコード" class="fadein"></figure>
+                <div class="box luxy-el">
+                    <h2>カラーレコード(ブルー)</h2>
+                    <p>盤面をブルーカラーにしたレコード盤。黒よりもお洒落な感じがして、ジャケットと雰囲気を合わせることができます。</p>
+                    <p><small>写真のレコードはYUKIKAの「Timeabout」より</small>
+                    </p>
+                </div>
+            </section>
+
+            <section class="area">
+                <figure class="luxy-el"><img src="images/scroll4.png" alt="スケルトンレコード" class="fadein"></figure>
+                <div class="box luxy-el">
+                    <h2>カラーレコード(パープル)</h2>
+                    <p>盤面をパープルカラーにしたレコード盤。レコードはインテリアにもおすすめです。</p>
+                    <p><small>写真のレコードはNEEDY GIRL OVERDOSEの「オリジナルサンドトラック」 より</small></p>
+                </div>
+            </section>
+
+            <section class="area">
+                <figure class="luxy-el"><img src="images/scroll5.png" alt="シングルレコード" class="fadein"></figure>
+                <div class="box luxy-el">
+                    <h2>カラーレコード(イエロー)</h2>
+                    <p>盤面をイエローカラーにしたレコード盤。個性的なレコード盤はコレクションしたくなります。</p>
+                    <p><small>写真のレコードはGingerRootの「City Slicker」 より</small> </p>
+                </div>
+            </section>
+
+            <section class="area">
+                <figure class="luxy-el"><img src="images/scroll6.png" alt="スケルトンレコード" class="fadein"></figure>
+                <div class="box luxy-el">
+                    <h2>スケルトンレコード</h2>
+                    <p>何も色を付けていない透明のレコード盤。ユニバーサルミュージックは過去に音に影響を与える着色料を全て排除した「100％ Pure
+                        LP」を発売したことがあります。</p>
+                    <p><small>写真のレコードはADOYの「VIVID」 より</small></p>
+                </div>
+            </section>
+
+            <section class="area">
+                <figure class="luxy-el"><img src="images/scroll7.png" alt="シングルレコード" class="fadein"></figure>
+                <div class="box luxy-el">
+                    <h2>シングルレコード</h2>
+                    <p>一般的なシングルレコード盤。盤面が小さい分、表と裏で曲が1曲ずつの収録ができます。日本ではドーナツ盤とも呼ばれています。
+                    </p>
+                    <p><small>写真のレコードは岡田有希子の「恋、はじめまして」 より</small> </p>
+                </div>
+            </section>
+        </div>
+        <!--container-->
+    </div>
+    <!--see=id-->
+
+    <div id="listen">
+        <div id="waver">
+            <div class="wave">
+                <p></p>
+                <canvas id="waveCanvas-listen"></canvas>
+            </div>
+            <!--/wave-->
+            <div class="container">
+                <div class="listen-wrapper">
+                    <img src="images/listenlogo.png" alt="聴く！ページロゴ" class="fadein">
+                    <h4 class="fadein">自分だけの空間でレコードを楽しみたいときもあります。</h4>
+                    <h4 class="fadein">そんなあなたに家でレコードを聴くために用意すべきものをご紹介。</h4>
+                </div>
+                <!--listen-wrapper-->
+            </div>
+            <!--container-->
+        </div>
+        <!--/waver-->
+
+        <div class="process-wrapper">
+            <h1 class="fadein headingg">レコードを聴く手順</h1>
+
+            <div id="double-slider">
+
+                <div id="text-slider-container">
+                    <div id="text-slider-box"></div>
+                    <div id="text-slider1">
+                        <p class="txt">1. レコードプレーヤーを用意</p>
+                        <p class="txt">2.ターンテーブルシートをセット</p>
+                        <p class="txt">3.レコード盤を持つ</p>
+                        <p class="txt">4.レコード盤をセット</p>
+                        <p class="txt">5.回転数を確認</p>
+                        <p class="txt">6.回転数を設定</p>
+                        <p class="txt">7.サイズを設定</p>
+                        <p class="txt">8.針を落とす</p>
+                        <p class="txt">9.聴く！</p>
+                    </div>
+                    <!--text-slider1-->
+                </div>
+                <!--text-slider-container-->
+
+                <div id="main-slider">
+                    <img src="images/process1.jpg" alt="手順1:レコードプレーヤーを用意">
+                    <img src="images/process2.jpg" alt="手順2:ターンテーブルシートをセット">
+                    <img src="images/process3.jpg" alt="手順3:レコード盤を持つ">
+                    <img src="images/process4.jpg" alt="手順4:レコード盤をセット">
+                    <img src="images/process5.jpg" alt="手順5:回転数を確認">
+                    <img src="images/process6.jpg" alt="手順6:回転数を設定">
+                    <img src="images/process7.jpg" alt="手順7:サイズを設定">
+                    <img src="images/process8.jpg" alt="手順8:針を落とす">
+                    <img src="images/process9.jpg" alt="手順9:聴く！">
+                </div>
+                <!--main-slider-->
+
+                <div id="text-slider-container">
+                    <div id="text-slider-box"></div>
+                    <div id="text-slider2">
+                        <p class="txt">
+                            使用するレコードプレーヤーを用意してください。
+                            レコードプレーヤーの価格帯は幅広いです。
+                            安価なものだと1万円程度、こだわれば100万円を超えるものまであります。
+                        </p>
+                        <p class="txt">
+                            ターンテーブルシートを敷きます。
+                            フェルトでできているシートの他にも、ゴムや和紙があります。
+                            デザインも豊富なのでこだわってみても良いかもしれません。
+                        </p>
+                        <p class="txt">
+                            聴きたいレコード盤を用意しましょう。
+                            レコード盤は片手で持ちます。音溝部分に触れてはいけません。
+                            親指を中央部分に置いて、レコード盤の端を小指で支えるようにして持ちます。
+                        </p>
+                        <p class="txt">
+                            セットするときは中央の穴を目印にそっと置きます。
+                            このときも音溝部分に触れないよう注意しましょう。
+                        </p>
+                        <p class="txt">
+                            回転数はレコード盤に記載があります。「33」であれば33回転、「45」であれば45回転です。
+                            写真の例では33回転だと分かります。
+                        </p>
+                        <p class="txt">
+                            先ほど確認した回転数に設定します。
+                            これを間違えると故障はしませんが、間違った速度で曲が流れてしまいます。
+                        </p>
+                        <p class="txt">
+                            聴こうとしているレコード盤のインチに合わせてサイズを設定します。
+                        </p>
+                        <p class="txt">
+                            スイッチを押してレコードを再生します。
+                            レコードを再生しているとパチパチという音がするときがあります。
+                            これの原因はホコリではなく実は静電気です。
+                            嫌いな人は手入れをおすすめしますが、レコードならではの感じがして個人的には好きです。
+                        </p>
+                        <p class="txt">
+                            音の出力に関してですが、アンプでスピーカーと繋ぐ必要があります。
+                            ですが最近はBluetooth対応のプレーヤーも発売されており、写真の例ではスピーカーとBluetooth接続をしています。
+                            ちなみに針からも小さくですが音は聞こえます。
+                        </p>
+
+                    </div>
+                    <!--text-slider2-->
+                </div>
+                <!--text-slider-container-->
+            </div>
+            <!--double-slider-->
+
+            <h1 class="fadein">あると便利なもの</h1>
+
+            <table>
+                <tr>
+                    <th><img width="300" height="300" src="images/useful1.jpg" alt="レコードクリーナー" class="fadein"></th>
+                    <td>
+                        <h2 class="fadein">レコードクリーナー</h2>
+                        <p>乾式のレコードクリーナー。</p>
+                        <p>すぐに聴きたいときは乾式、そうでない場合は専用のクリーニング液を使用するのがおすすめ。<br class="pc_view">
+                            再生時のパチパチ音が嫌いな人は、これでお手入れしてみてください。<br class="pc_view">
+                            写真のものはaudio-technica製で価格は1320円程度でした。<br class="pc_view">
+                            掃除をするときは必ずレコードの回る方向(右回転)を意識して音溝に沿ってクリーナーを当ててください。</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th><img width="300" height="300" src="images/useful2.jpg" alt="スタイラスクリーナー" class="fadein"></th>
+                    <td>
+                        <h2 class="fadein">スタイラスクリーナー</h2>
+                        <p>レコード針を掃除するもの。</p>
+                        <p>回せば回すほど音溝に溜まっていたゴミが針に付着します。<br class="pc_view">
+                            だんだん大きな塊になるので目で確認することができます。<br class="pc_view">
+                            写真のものはマニキュアのように、中にブラシが入っています。針元から針先に向かってブラシを動かし掃除します。<br class="pc_view">
+                            ちなみに綿棒でも代用可能です。<br class="pc_view">
+                            針は一度悪くなると取り替えなければいけません。大切に扱うよう心がけましょう。</p>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <!--process-wrapper-->
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="rgba(96, 96, 104, 0.2)" fill-opacity="1"
+                d="M0,128L40,133.3C80,139,160,149,240,133.3C320,117,400,75,480,85.3C560,96,640,160,720,165.3C800,171,880,117,960,85.3C1040,53,1120,43,1200,58.7C1280,75,1360,117,1400,138.7L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+    <!--listen=id-->
+
+    <div id="q&a">
+
+        <div class="container">
+            <div class="qa-wrapper">
+                <img src="images/q&alogo.png" alt="Q&Aページロゴ" class="fadein">
+                <h4 class="fadein">レコードに初めて触れる方、久しぶりにレコードを聴きたくなった方</h4>
+                <h4 class="fadein">色々な疑問があると思います。</h4>
+                <h4 class="fadein">よくある質問を以下にまとめましたのでぜひご覧ください。</h4>
+            </div>
+        </div>
+        <!--container-->
+
+        <ul class="accordion-area">
+            <li>
+                <section>
+                    <h3 class="title">レコードを聴くために最低限準備するものは？</h3>
+                    <div class="answer">
+                        <p>聴きたいレコード盤、レコードプレーヤー、ターンテーブルシートです。あとは音を出力する機器が必要ですが、アンプを繋ぐタイプなのかBluetooth対応型なのかで変わってきます。
+                        </p>
+                    </div>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <h3 class="title">レコードはどこで購入できる？</h3>
+                    <div class="answer">
+                        <p>レコードショップやオンラインショップ、身近なお店であればBOOKOFFでもレコードを取り扱っている店舗があります。</p>
+                    </div>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <h3 class="title">おすすめのレコードショップは？</h3>
+                    <div class="answer">
+                        <p>実店舗であれば「<a href="https://www.bananarecord.com/shop_information">BANANA RECORD</a>」「<a
+                                href="https://diskunion.net/st/shop/">disk union</a>」「<a
+                                href="https://www.flakerecords.com/">FLAKE
+                                RECORDS</a>」がおすすめです。もちろんオンラインショップもあるので現地までいけない方はぜひ。</p>
+                    </div>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <h3 class="title">レコードを聴くときに気を付けることは？</h3>
+                    <div class="answer">
+                        <p>針の状態確認です。何回も聞いているうちにほこりが溜まるので定期的に掃除することが大切です。</p>
+                    </div>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <h3 class="title">初心者におすすめのレコードプレーヤーは？</h3>
+                    <div class="answer">
+                        <p><a href="https://www.audio-technica.co.jp/product/AT-LP60XBT_GBK">audio-technicaのワイヤレスターンテーブルAT-LP60XBT
+                                GBK</a>です。Bluetooth対応なのでスピーカーに繋げば簡単に聴くことができます。</p>
+                    </div>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <h3 class="title">わざわざレコードで聴く理由は？</h3>
+                    <div class="answer">
+                        <p>味のある音質になるからです。個人的には針から出るパチパチ音もレコードならではなので好きです。</p>
+                    </div>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <h3 class="title">レコードの正しい保管方法は？</h3>
+                    <div class="answer">
+                        <p>高温多湿を避けます。レコードの音溝にゴミが溜まらないよう、袋に入れて保管するのが常識となっています。</p>
+                    </div>
+                </section>
+            </li>
+        </ul>
+
+
+    </div>
+    <!--Q&A=id-->
+
+    <p id="page-top"><a href="#home"><span>Page Top</span></a></p>
+
+    <!--font-->
+    <script>
+        $("#main-slider").slick({
+            //ここにオプション
+            asNavFor: "#text-slider1, #text-slider2", //テキストスライダーを追従させる
+            autoplay: false            //自動再生
+        })
+        $("#text-slider1, #text-slider2").slick({
+            //ここにオプション
+            draggable: false,         //ドラッグでのスライド禁止
+            arrows: false             //矢印非表示
+        })
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/pagetop.js"></script>
+    <script src="js/qa.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+    <footer>
+        <small>&copy;2022 Hirose-Saki.</small>
+    </footer>
+
+    <script src="js/wave.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/hum.js"></script>
+
+
+</body>
+
+</html>
